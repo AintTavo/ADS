@@ -6,7 +6,7 @@
     session_start();
     //Verificamos que el usuario venga del login
     if (empty($_SESSION["USUARIO"])) {
-        header("location:./../HTML/Login_Administrador.html"); 
+        header("location:./../HTML/Login_Usuario.html"); 
     }
 
 ?>

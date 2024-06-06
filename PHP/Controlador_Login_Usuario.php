@@ -24,6 +24,6 @@
         else
         {
             echo "No existe registro";
-            header("location: ../HTML/Login_Administrador.html");
+            header("location: ../HTML/Login_Usuario.html");
         }    
 ?> 
