@@ -1,0 +1,19 @@
+/* Estilos para los radio buttons */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #2196F3;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Estilos para los radio buttons seleccionados */
+input[type="radio"]:checked {
+    background-color: #2196F3;
+    border-color: #2196F3;
+    color: #fff;
+}
