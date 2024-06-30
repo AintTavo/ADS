@@ -1,0 +1,72 @@
+/* Custom styles for the Inicio page */
+body.inicio-body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.inicio-header, .inicio-footer {
+    background-color: #007bff;
+    color: white;
+}
+
+.inicio-card {
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.inicio-card:hover {
+    transform: scale(1.05);
+}
+
+.inicio-card-image img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.inicio-card-title {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    color: white;
+}
+
+.inicio-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.inicio-title {
+    margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+    .inicio-card-image img {
+        height: 150px;
+    }
+}
+
+.inicio-card-content {
+    padding: 20px;
+}
+
+/* Hover effect */
+.inicio-card:hover .inicio-card-image img {
+    filter: brightness(50%);
+}
+
+.inicio-card:hover .inicio-card-title {
+    display: block;
+}
+
+/* Bootstrap encapsulation */
+.bootstrap-style .navbar,
+.bootstrap-style .footer {
+    all: initial;
+    * {
+        all: unset;
+    }
+    display: block;
+    all: unset;
+    font-family: system-ui;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

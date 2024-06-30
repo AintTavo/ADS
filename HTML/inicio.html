@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/CSS/site.css" />
+    <link rel="stylesheet" href="./../CSS/materialize.min.css">
+    <link rel="stylesheet" href="./../CSS/inicio.css">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- JavaScript -->
+    <script src="./../JS/jquery.min.js"></script>
+    <script src="./../JS/materialize.min.js"></script>
+    <script src="./../JS/inicio.js"></script>
+</head>
+<body class="inicio-body">
+    <header class="bootstrap-style">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/IMG/Logo.svg" alt="Logo" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/infoECV.html">Info Enfermedades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/rutinas.html">Rutinas recomendadas</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/RegistroUsuario.html">Registrar Usuario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/Login_Usuario.html">Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="inicio-main">
+        <div class="container inicio-container">
+            <h3 class="center-align inicio-title">Categorías</h3>
+            <div class="row">
+                
+                <div class="col s12 m4">
+                    <div class="card hoverable inicio-card">
+                        <div class="card-image inicio-card-image">
+                            <a href="/Agenda.html">
+                                <img src="./../IMG/inicio/agenda.jpg" alt="Agenda">
+                                <span class="card-title inicio-card-title"><h6>Agenda</h6></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card hoverable inicio-card">
+                        <div class="card-image inicio-card-image">
+                            <a href="/HTML/infoECV.html">
+                                <img src="./../IMG/inicio/infoecv.avif" alt="ECV">
+                                <span class="card-title inicio-card-title"><h6>Información sobre ECV</h6></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card hoverable inicio-card">
+                        <div class="card-image inicio-card-image">
+                            <a href="/HTML/rutinas.html">
+                                <img src="./../IMG/inicio/rutina.jpg" alt="Rutinas">
+                                <span class="card-title inicio-card-title"><h6>Rutinas de Ejercicio</h6></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card hoverable inicio-card">
+                        <div class="card-image inicio-card-image">
+                            <a href="/Hospitales.html">
+                                <img src="./../IMG/inicio/hospital.avif" alt="Hospitales">
+                                <span class="card-title inicio-card-title"><h6>Hospitales Cercanos</h6></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card hoverable inicio-card">
+                        <div class="card-image inicio-card-image">
+                            <a href="/Personal.html">
+                                <img src="./../IMG/inicio/infopersonal.avif" alt="Personal">
+                                <span class="card-title inicio-card-title"><h6>Información Personal</h6></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card hoverable inicio-card">
+                        <div class="card-image inicio-card-image">
+                            <a href="/Ajustes.html">
+                                <img src="./../IMG/inicio/ajustes.avif" alt="Ajustes">
+                                <span class="card-title inicio-card-title"><h6>Ajustes</h6></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="center-align inicio-title">Información de Salud</h3>
+            <div class="row">
+                
+                <div class="col s12 m6">
+                    <div class="card hoverable inicio-card">
+                        <div class="card-image inicio-card-image">
+                            <img src="./../IMG/inicio/consejossalud.jpg" alt="Salud 1">
+                            <span class="card-title inicio-card-title">Consejos de Salud</span>
+                        </div>
+                        <div class="card-content inicio-card-content">
+                            <p>Estar en un estado de estres podria ser una causa de ECV.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card hoverable inicio-card">
+                        <div class="card-image inicio-card-image">
+                            <img src="./../IMG/inicio/nutricion.avif" alt="Salud 2">
+                            <span class="card-title inicio-card-title">Nutrición</span>
+                        </div>
+                        <div class="card-content inicio-card-content">
+                            <p>Manten una dieta saludable a base de frutas, verduras y agua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="center-align inicio-title">Recomendaciones</h3>
+            <div class="row">
+                
+                <div class="col s12 m6">
+                    <div class="card hoverable inicio-card">
+                        <div class="card-image inicio-card-image">
+                            <img src="./../IMG/inicio/ejerciciodiario.jpg" alt="Recomendación 1">
+                            <span class="card-title inicio-card-title">Ejercicio Diario</span>
+                        </div>
+                        <div class="card-content inicio-card-content">
+                            <p>Realizar ejercicio 30 min al dia ayuda a prevenir ECV.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card hoverable inicio-card">
+                        <div class="card-image inicio-card-image">
+                            <img src="./../IMG/inicio/revision.avif" alt="Recomendación 2">
+                            <span class="card-title inicio-card-title">Revisión Médica</span>
+                        </div>
+                        <div class="card-content inicio-card-content">
+                            <p>No olvides la importancia de realizar revisiones médicas periódicas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bootstrap-style border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - TuSalud - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+</body>
+</html>
