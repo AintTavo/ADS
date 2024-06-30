@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preregistro</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="./../CSS/materialize.min.css">
+    <link href="./../CSS/Login.css" rel="stylesheet">
+    <link href="./../CSS/flex.css" rel="stylesheet">
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--JavaScript-->
+    <script src="./../JS/jquery.min.js"></script>
+    <script src="./../JS/materialize.min.js"></script>
+    <script src="./../JS/just_validate.min.js"></script>
+    <script src="./../JS/sweet_alert.min.js"></script>
+    <script src="./../JS/Login_Administrador.js"></script>
+</head>
+<body>
+    <header>
+        <div class="row">
+            <div class="col s12">
+                <img src="./../IMG/Logo_IPN.png" class="logos_instituciones responsive-img" >
+            </div>
+        </div>
+        
+    </header>
+    <main class="valign-wrapper">
+        <div class="container">
+            <!--Titulo dela paginas-->
+            <div class="row">
+                <div class="col s12 ">
+                        
+                        <h3>Inicio de sesión </h3>
+                </div>
+            </div>
+            <!--Introduccion de datos-->
+           
+                <form id="formulario_admin" action="../PHP/Controlador_Login_Usuario.php"  method="post" autocomplete="off"  >
+                    <div class="row">
+                        <!--Usuario-->
+                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix">account_box</i>
+                            <label for="usuario">Ingrese su Usuario</label>
+                            <input id="usuario" type="text" class="validate" autocomplete="off" name="usuario">
+                        </div>
+                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix">lock_outline</i>
+                            <label for="password">Ingrese su contraseña</label>
+                            <input id="password" type="password"  autocomplete="off" name="password">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Boton de envio-->
+                        <div class="col s12 input-field">
+                            <button class="btn blue" type="submit" name="boton_admin" id="boton_admin1" style="width: 100%;">ENTRAR</button>
+                        </div>
+                        
+                    </div> 
+                              
+                </form>
+           
+
+    </main>
+    <footer class="page-footer blue">
+            <div class="footer-copyright">
+              <div class="container ">
+              © 2024 Copyright 
+              <a class="grey-text text-lighten-4 right" href="#!">Mas Links</a>
+              </div>
+            </div>
+    </footer>
+</body>
+</html>
