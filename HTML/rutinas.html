@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutinas para Enfermedades Cardiovasculares - TuSalud</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <style>
+        /* Estilos adicionales para efectos interactivos */
+        .intro {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+
+        .intro h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            color: #6c757d;
+        }
+
+        .services {
+            padding: 80px 0;
+        }
+
+        .services h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .services img {
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .services img:hover {
+            transform: scale(1.05);
+        }
+
+        .services ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .services ul li {
+            padding-left: 20px;
+            position: relative;
+            line-height: 2;
+        }
+
+        .services ul li:before {
+            content: "\f105";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/IMG/Logo.svg" alt="Logo" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cardiopatia">Cardiopatía Isquémica</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hipertension">Hipertensión Arterial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#insuficiencia">Insuficiencia Cardíaca</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#arritmias">Arritmias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#valvulopatias">Valvulopatías</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="inicio" class="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Rutinas de Ejercicio para Enfermedades Cardiovasculares</h1>
+                    <p>Bienvenido a TuSalud, donde encontrarás rutinas de ejercicio recomendadas para diversas
+                        enfermedades cardiovasculares. Mantenerse activo de manera adecuada puede mejorar tu calidad de
+                        vida y bienestar general.</p>
+                    <p>Selecciona una enfermedad cardiovascular en la barra de navegación para conocer las rutinas de
+                        ejercicio recomendadas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cardiopatia" class="services">
+        <div class="container">
+            <h2>Rutinas para Cardiopatía Isquémica</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/IMG/img/cardiopatiaEjercicio.jpg" class="img-fluid"
+                        alt="Ejercicio para Cardiopatía Isquémica">
+                </div>
+                <div class="col-md-6">
+                    <h4>Rutinas de Ejercicio Recomendadas</h4>
+                    <p>Las personas con cardiopatía isquémica deben realizar ejercicios aeróbicos de intensidad
+                        moderada y baja, combinados con ejercicios de fortalecimiento muscular y estiramiento. Es
+                        importante evitar esfuerzos excesivos y consultar con un profesional de la salud.</p>
+                    <h4>Ejemplos de Ejercicios</h4>
+                    <ul>
+                        <li><i class="fas fa-walking"></i> Caminatas diarias.</li>
+                        <li><i class="fas fa-bicycle"></i> Ciclismo suave en terreno plano.</li>
+                        <li><i class="fa-solid fa-person"></i> Ejercicios de estiramiento y relajación.</li>
+                        <li><i class="fas fa-dumbbell"></i> Entrenamiento de fuerza con pesas ligeras.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hipertension" class="services">
+        <div class="container">
+            <h2>Rutinas para Hipertensión Arterial</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/IMG/img/hipertensionEjercicio.jpg" class="img-fluid"
+                        alt="Ejercicio para Hipertensión Arterial">
+                </div>
+                <div class="col-md-6">
+                    <h4>Rutinas de Ejercicio Recomendadas</h4>
+                    <p>Las personas con hipertensión arterial deben enfocarse en ejercicios aeróbicos de intensidad
+                        moderada, combinados con ejercicios de fortalecimiento muscular y flexibilidad. Es esencial
+                        mantener una rutina regular y evitar ejercicios muy intensos sin supervisión.</p>
+                    <h4>Ejemplos de Ejercicios</h4>
+                    <ul>
+                        <li><i class="fas fa-walking"></i> Caminatas rápidas o trotar suavemente.</li>
+                        <li><i class="fas fa-swimmer"></i> Natación o aeróbicos acuáticos.</li>
+                        <li><i class="fas fa-child"></i> Ejercicios de yoga para reducir el estrés.</li>
+                        <li><i class="fas fa-dumbbell"></i> Entrenamiento de fuerza con pesas ligeras o bandas de
+                            resistencia.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="insuficiencia" class="services">
+        <div class="container">
+            <h2>Rutinas para Insuficiencia Cardíaca</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/IMG/img/insuficienciaEjercicio.jpg" class="img-fluid"
+                        alt="Ejercicio para Insuficiencia Cardíaca">
+                </div>
+                <div class="col-md-6">
+                    <h4>Rutinas de Ejercicio Recomendadas</h4>
+                    <p>Las personas con insuficiencia cardíaca deben realizar ejercicios aeróbicos de baja intensidad,
+                        evitando esfuerzos extenuantes. El ejercicio regular puede mejorar la capacidad de ejercicio
+                        y la calidad de vida.</p>
+                    <h4>Ejemplos de Ejercicios</h4>
+                    <ul>
+                        <li><i class="fa fa-walking"></i> Caminatas cortas y pausadas.</li>
+                        <li><i class="fa-solid fa-person"></i> Ejercicios de estiramiento suaves.</li>
+                        <li><i class="fa fa-bicycle"></i> Ciclismo ligero en terreno plano.</li>
+                        <li><i class="fa fa-heartbeat"></i> Ejercicios de rehabilitación cardíaca supervisados.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="arritmias" class="services">
+        <div class="container">
+            <h2>Rutinas para Arritmias</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/IMG/img/aritmiasEjercicios.webp" class="img-fluid" alt="Ejercicio para Arritmias">
+                </div>
+                <div class="col-md-6">
+                    <h4>Rutinas de Ejercicio Recomendadas</h4>
+                    <p>Las personas con arritmias deben evitar ejercicios extenuantes y optar por actividades de
+                        bajo impacto que no pongan demasiada tensión en el corazón. Es crucial mantener una rutina
+                        constante y consultar con un especialista.</p>
+                    <h4>Ejemplos de Ejercicios</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-person"></i> Yoga o Tai Chi para mejorar la relajación.</li>
+                        <li><i class="fas fa-biking"></i> Ciclismo suave en terreno plano.</li>
+                        <li><i class="fa-solid fa-dumbbell"></i> Ejercicios de resistencia con pesas ligeras.</li>
+                        <li><i class="fas fa-swimmer"></i> Natación a un ritmo moderado.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="valvulopatias" class="services">
+        <div class="container">
+            <h2>Rutinas para Valvulopatías</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/IMG/img/valvulopatiasEjercicio.jpg" class="img-fluid"
+                        alt="Ejercicio para Valvulopatías">
+                </div>
+                <div class="col-md-6">
+                    <h4>Rutinas de Ejercicio Recomendadas</h4>
+                    <p>Las personas con valvulopatías deben centrarse en ejercicios que mejoren la resistencia
+                        cardiovascular y la flexibilidad, evitando actividades que generen mucha presión en el
+                        corazón. Es esencial consultar con un médico antes de iniciar cualquier rutina.</p>
+                    <h4>Ejemplos de Ejercicios</h4>
+                    <ul>
+                        <li><i class="fas fa-walking"></i> Caminatas moderadas en terreno llano.</li>
+                        <li><i class="fas fa-biking"></i> Ciclismo suave en terreno plano.</li>
+                        <li><i class="fa-solid fa-person"></i> Ejercicios de estiramiento y relajación.</li>
+                        <li><i class="fa-solid fa-dumbbell"></i> Entrenamiento de fuerza con ejercicios adaptados.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Puedes continuar con las secciones restantes como Prevención, adaptando los íconos y ejercicios según sea necesario -->
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - TuSalud - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacidad</a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

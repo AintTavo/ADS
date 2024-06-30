@@ -1,29 +1,34 @@
 <?php
-    //Se utiliza el archivo de conexion para la base de datos
-    include ("./Conexion_Base_Datos.php");
-    //Iniciamos la sesion
-    session_start();
-    //Validamos que el fomrulario y el boton se hayan presionado
-    
-        //Obtenemos los valores enviados por el formulario
-        $usuario=$_POST["usuario"];
-        $contra=$_POST["password"];
-        //Realizamos la consulta en la base de datos
-        $sql="SELECT * FROM administrador WHERE USUARIO = '$usuario' AND CONTRA='$contra' ";
-        $resultado=mysqli_query($conexion,$sql);
-        //Obtenemos el numero de registro de cada consulta
-        $numero_registro=mysqli_num_rows($resultado);
+session_start();
+include("./Conexion_Base_Datos.php");
 
-        //Verificamos si se encontro algun registro
-        if($numero_registro==1)
-        {
-            $_SESSION["USUARIO"]=$usuario;
-            echo "Bienvenido";
-            header("location:Crud_Docentes.php");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $usuario = $_POST["usuario"];
+    $password = $_POST["password"];
+
+    // Consulta para verificar usuario y contraseña
+    $sql = "SELECT id_usuario, password FROM users WHERE username = ?";
+    $stmt = $conexion->prepare($sql);
+    $stmt->bind_param("s", $usuario);
+    $stmt->execute();
+    $stmt->store_result();
+
+    if ($stmt->num_rows == 1) {
+        $stmt->bind_result($id_usuario, $hashed_password);
+        $stmt->fetch();
+        
+        if (password_verify($password, $hashed_password)) {
+            $_SESSION["id_usuario"] = $id_usuario;
+            header("location: Crud_Docentes.php");
+            exit();
+        } else {
+            echo "Contraseña incorrecta.";
         }
-        else
-        {
-            echo "No existe registro";
-            header("location: ../HTML/Login_Usuario.html");
-        }    
-?> 
+    } else {
+        echo "Usuario no encontrado.";
+    }
+    $stmt->close();
+} else {
+    header("location: ../HTML/Login_Usuario.html");
+}
+?>

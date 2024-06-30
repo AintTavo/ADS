@@ -1,14 +1,44 @@
 <?php
-    //Incluimos la conexion a la base de datos
-    include "./Conexion_Base_Datos.php";
-    
-    //Llamamos a la sesion
-    session_start();
-    //Verificamos que el usuario venga del login
-    if (empty($_SESSION["USUARIO"])) {
-        header("location:./../HTML/Login_Usuario.html"); 
+session_start();
+include("./Conexion_Base_Datos.php");
+
+if (empty($_SESSION["id_usuario"])) {
+    header("location:./../HTML/Login_Usuario.html");
+    exit();
+}
+
+$id_usuario = $_SESSION["id_usuario"];
+
+// Insertar registro en la tabla agenda
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["registrar_docente"])) {
+    $recordatorio = $_POST["recordatorio"];
+    $tipo = $_POST["tipo"];
+    $importancia = $_POST["importancia"];
+    $inicio_periodo = $_POST["inicio_periodo"];
+    $fin_periodo = $_POST["fin_periodo"];
+    $hora = $_POST["hora"];
+
+    $sql = "INSERT INTO agenda (id_usuario, recordatorio, tipo, importancia, inicio_periodo, fin_periodo, hora) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $stmt = $conexion->prepare($sql);
+    $stmt->bind_param("issssss", $id_usuario, $recordatorio, $tipo, $importancia, $inicio_periodo, $fin_periodo, $hora);
+
+    if ($stmt->execute()) {
+        echo "Registro exitoso.";
+        header("Location: ./Crud_Docentes.php"); // Redirigir después de registrar
+        exit();
+    } else {
+        echo "Error: " . $stmt->error;
     }
 
+    $stmt->close();
+}
+
+// Consulta para obtener los registros de la agenda del usuario actual
+$sql_agenda = "SELECT * FROM agenda WHERE id_usuario = ?";
+$stmt_agenda = $conexion->prepare($sql_agenda);
+$stmt_agenda->bind_param("i", $id_usuario);
+$stmt_agenda->execute();
+$result_agenda = $stmt_agenda->get_result();
 ?>
 
 <!DOCTYPE html>
@@ -184,19 +214,19 @@
                                 //Realizamos la consulta sql
                                 $sql=$conexion->query('SELECT * FROM agenda');
                                 //Recorremos todos los datos de la consulta
-                                while ($datos=$sql->fetch_object()) {?>
+                                while ($datos = $result_agenda->fetch_object()) {
+                                    ?>
                                     <tr>
-                                    <td><?=$datos->Id?></td>    
-                                    <td><?=$datos->Recordatorio?></td>
+                                        <td><?=$datos->Id?></td>    
+                                        <td><?=$datos->Recordatorio?></td>
                                         <td><?=$datos->Tipo?></td>
                                         <td><?=$datos->Importancia?></td>
-                                        <td><?=$datos->Inicio?></td>
-                                        <td><?=$datos->Fin?></td>
-                                        <td><?=$datos->Horario?></td>
+                                        <td><?=$datos->Inicio_periodo?></td>
+                                        <td><?=$datos->Fin_periodo?></td>
+                                        <td><?=$datos->Hora?></td>
                                         <td>
-                                        <!--Cuando presionamos el boton para editar vamos a enviar la id -->
-                                        <a href="./Editar_Docentes.php?Id=<?=$datos->Id?>" class="btn btn-small orange"><i class="material-icons small">edit</i></a>
-                                        <a href="./Eliminar_Docente.php?Id=<?=$datos->Id?>" class="btn btn-small red" id="boton_eliminar"><i class="material-icons small">delete_forever</i></a>
+                                            <a href="./Editar_Docentes.php?Id=<?=$datos->Id?>" class="btn btn-small orange"><i class="material-icons small">edit</i></a>
+                                            <a href="./Eliminar_Docente.php?Id=<?=$datos->Id?>" class="btn btn-small red" id="boton_eliminar"><i class="material-icons small">delete_forever</i></a>
                                         </td>
                                     </tr>
                             <?php }

@@ -1,11 +1,23 @@
 <?php
-    //Incluimos la conexion a la base de datos
-    include "./Conexion_Base_Datos.php";
-    //Recuperamos el id enviado
-    $id=$_GET["Id"];
-    //Realizmaos la consulta a la base de datos con la id enviada
-    $sql=$conexion->query("SELECT * FROM agenda WHERE Id = '$id' ");
+include "./Conexion_Base_Datos.php";
 
+if (!isset($_GET["Id"])) {
+    header("location:./Crud_Docentes.php");
+    exit();
+}
+
+$id = $_GET["Id"];
+$sql = $conexion->prepare("SELECT * FROM agenda WHERE Id = ? AND id_usuario = ?");
+$sql->bind_param("ii", $id, $_SESSION["id_usuario"]);
+$sql->execute();
+$resultado = $sql->get_result();
+
+if ($resultado->num_rows === 0) {
+    echo "No se encontró el registro.";
+    exit();
+}
+
+$datos = $resultado->fetch_object();
 ?>
 
 <!DOCTYPE html>

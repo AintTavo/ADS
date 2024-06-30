@@ -1,250 +1,271 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enfermedades Cardiovasculares</title>
+    <title>Enfermedades Cardiovasculares - TuSalud</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/CSS/styles.css">
 </head>
+
 <body>
     <header>
-        <a class="navbar-brand" href="/index.html">
-            <img src="/IMG/Logo.svg" alt="Logo" style="height: 40px;">
-        </a>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#cardiopatia">Cardiopatía Isquémica</a></li>
-                <li><a href="#hipertension">Hipertensión Arterial</a></li>
-                <li><a href="#insuficiencia">Insuficiencia Cardíaca</a></li>
-                <li><a href="#arritmias">Arritmias</a></li>
-                <li><a href="#valvulopatias">Valvulopatías</a></li>
-                <li><a href="#tratamiento">Prevención</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/IMG/Logo.svg" alt="Logo" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cardiopatia">Cardiopatía Isquémica</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hipertension">Hipertensión Arterial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#insuficiencia">Insuficiencia Cardíaca</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#arritmias">Arritmias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#valvulopatias">Valvulopatías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tratamiento">Prevención</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <section id="inicio" class="hero">
-        <div class="hero-text">
-            <h2>Enfermedades Cardiovasculares</h2>
-            <p>Conozca todo sobre las enfermedades cardiovasculares, sus tratamientos y cómo prevenirlas.</p>
+        <div class="container mt-5">
+            <div class="text-center">
+                <img src="/IMG/Logo.svg" alt="Logo" class="img-fluid" style="height: 200px;">
+                <h1 class="display-4">Enfermedades Cardiovasculares</h1>
+                <p class="lead">Conozca todo sobre las enfermedades cardiovasculares, sus tratamientos y cómo
+                    prevenirlas.</p>
+            </div>
         </div>
     </section>
 
     <section id="enfermedades" class="enfermedades">
-        <h2>Conoce más acerca de algunas enfermedades cardiovasculares</h2>
-        <div class="enfermedades-container">
-            <div class="enfermedad-item">
-                <div class="image-jiji">
-                    <a href="https://medicina.uc.cl/publicacion/cardiopatia-coronaria/" target="_blank">
-                      <img src="/IMG/img/cardiopatia.png" alt="Cardiopatía Isquémica">
-                    </a>
+        <div class="container mt-5">
+            <h2 class="text-center">Conoce más acerca de algunas enfermedades cardiovasculares</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <a href="https://medicina.uc.cl/publicacion/cardiopatia-coronaria/" target="_blank">
+                            <img class="card-img-top" src="/IMG/img/cardiopatia.png" alt="Cardiopatía Isquémica">
+                        </a>
+                        <div class="card-body">
+                            <h3 class="card-title">Cardiopatía Isquémica</h3>
+                        </div>
+                    </div>
                 </div>
-                <h3>Cardiopatía Isquémica</h3>
-            </div>
-            <div class="enfermedad-item">
-                <div class="image-jiji">
-                    <a href="https://www.who.int/es/news-room/fact-sheets/detail/hypertension" target="_blank">
-                        <img src="/IMG/img/hipertension.png" alt="Cardiopatía Isquémica">
-                    </a>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <a href="https://www.who.int/es/news-room/fact-sheets/detail/hypertension" target="_blank">
+                            <img class="card-img-top" src="/IMG/img/hipertension.png" alt="Hipertensión Arterial">
+                        </a>
+                        <div class="card-body">
+                            <h3 class="card-title">Hipertensión Arterial</h3>
+                        </div>
+                    </div>
                 </div>
-                <h3>Hipertensión Arterial</h3> 
-            </div>
-            <div class="enfermedad-item">
-                <div class="image-jiji">
-                    <a href="http://www.facmed.unam.mx/eventos/seam2k1/2008/feb_01_ponencia.html" target="_blank">
-                        <img src="/IMG/img/insuficiencia.png" alt="Cardiopatía Isquémica">
-                    </a>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <a href="http://www.facmed.unam.mx/eventos/seam2k1/2008/feb_01_ponencia.html" target="_blank">
+                            <img class="card-img-top" src="/IMG/img/insuficiencia.png" alt="Insuficiencia Cardíaca">
+                        </a>
+                        <div class="card-body">
+                            <h3 class="card-title">Insuficiencia Cardíaca</h3>
+                        </div>
+                    </div>
                 </div>
-                <h3>Insuficiencia Cardíaca</h3>
-            </div>
-            <div class="enfermedad-item">
-                <div class="image-jiji">
-                    <a href="https://www.gob.mx/salud/articulos/que-son-las-arritmias" target="_blank">
-                        <img src="/IMG/img/arritmias.png" alt="Cardiopatía Isquémica">
-                    </a>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <a href="https://www.gob.mx/salud/articulos/que-son-las-arritmias" target="_blank">
+                            <img class="card-img-top" src="/IMG/img/arritmias.png" alt="Arritmias">
+                        </a>
+                        <div class="card-body">
+                            <h3 class="card-title">Arritmias</h3>
+                        </div>
+                    </div>
                 </div>
-                <h3>Arritmias</h3>
-            </div>
-            <div class="enfermedad-item">
-                <div class="image-jiji">
-                    <a href="https://www.clinicbarcelona.org/asistencia/enfermedades/valvulopatias#:~:text=Las%20valvulopat%C3%ADas%20son%20un%20conjunto,(insuficiencia)%20de%20forma%20correcta." target="_blank">
-                        <img src="/IMG/img/valvulopatias.png" alt="Cardiopatía Isquémica">
-                    </a>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card">
+                        <a href="https://www.clinicbarcelona.org/asistencia/enfermedades/valvulopatias#:~:text=Las%20valvulopat%C3%ADas%20son%20un%20conjunto,(insuficiencia)%20de%20forma%20correcta."
+                            target="_blank">
+                            <img class="card-img-top" src="/IMG/img/valvulopatias.png" alt="Valvulopatías">
+                        </a>
+                        <div class="card-body">
+                            <h3 class="card-title">Valvulopatías</h3>
+                        </div>
+                    </div>
                 </div>
-                <h3>Valvulopatías</h3>
             </div>
         </div>
     </section>
 
     <section id="cardiopatia" class="services">
-        <h2>Cardiopatía Isquémica</h2>
-        <div class="services-container">
-            <div class="service-item">
-                <div class="image-container">
-                    <img src="/IMG/img/cardiopatia.png" alt="Cardiopatía Isquémica">
+        <div class="container">
+            <h2>Cardiopatía Isquémica</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/IMG/img/cardiopatia.png" class="img-fluid" alt="Cardiopatía Isquémica">
                 </div>
-                <div class="service-info">
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <h4>¿Qué es?</h4>
-                            <p>La cardiopatía isquémica crónica constituye un síndrome caracterizado por una disminución del aporte de sangre oxigenada al miocardio que desde un punto de vista estructural y/o funcional afecte el libre flujo de sangre de una o más arterias coronarias epicárdicas.</p>
-                        </div>
-                        <div class="info-item">
-                            <h4>Síntomas</h4>
-                            <p>Los síntomas más comunes son dolor o molestia en el pecho (angina), que puede sentirse como presión, opresión, ardor o dolor. También pueden presentarse síntomas como dificultad para respirar, fatiga, sudoración y náuseas.</p>
-                        </div>
-                        <div class="info-item">
-                            <h4>Factores de riesgo</h4>
-                            <p>Los principales factores de riesgo incluyen el tabaquismo, la hipertensión arterial, el colesterol alto (especialmente el LDL o "colesterol malo"), la diabetes mellitus, la obesidad, la falta de actividad física y antecedentes familiares de enfermedad cardiovascular prematura.</p>
-                        </div>
-                    </div>
+                <div class="col-md-6">
+                    <h4>¿Qué es?</h4>
+                    <p>La cardiopatía isquémica crónica constituye un síndrome caracterizado por una disminución del
+                        aporte de sangre oxigenada al miocardio que desde un punto de vista estructural y/o funcional
+                        afecte el libre flujo de sangre de una o más arterias coronarias epicárdicas.</p>
+                    <h4>Síntomas</h4>
+                    <p>Los síntomas más comunes son dolor o molestia en el pecho (angina), que puede sentirse como
+                        presión, opresión, ardor o dolor. También pueden presentarse síntomas como dificultad para
+                        respirar, fatiga, sudoración y náuseas.</p>
+                    <h4>Factores de riesgo</h4>
+                    <p>Los principales factores de riesgo incluyen el tabaquismo, la hipertensión arterial, el
+                        colesterol alto (especialmente el LDL o "colesterol malo"), la diabetes mellitus, la obesidad,
+                        la falta de actividad física y antecedentes familiares de enfermedad cardiovascular prematura.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="hipertension" class="services">
-        <h2>Hipertensión Arterial</h2>
-        <div class="services-container">
-            <div class="service-item">
-                <div class="image-container">
-                    <img src="/IMG/img/hipertension.png" alt="Hipertensión Arterial">
+        <div class="container">
+            <h2>Hipertensión Arterial</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/IMG/img/hipertension.png" class="img-fluid" alt="Hipertensión Arterial">
                 </div>
-                <div class="service-info">
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <h4>¿Qué es?</h4>
-                            <p>La hipertensión arterial es una enfermedad crónica en la que aumenta la presión con la que el corazón bombea sangre a las arterias, para que circule por todo el cuerpo.</p>
-                        </div>
-                        <div class="info-item">
-                            <h4>Síntomas</h4>
-                            <p>La mayoría de las personas que padecen de hipertensión arterial no lo saben, porque no tienen ningún síntoma, pero hay quien puede presentar: Dolor de cabeza intenso, mareo, zumbido de oídos, sensación de ver lucecitas, visión borrosa, dolor en el pecho y/o lumbar y tobillos hinchados. </p>
-                        </div>
-                        <div class="info-item">
-                            <h4>Factores de riesgo</h4>
-                            <p>El sobrepeso y la obesidad  pueden aumentar la presión arterial, sube los niveles de glucosa en la sangre, colesterol, triglicéridos y ácido úrico, lo que dificulta que la sangre fluya por el organismo.</p>
-                        </div>
-                    </div>
+                <div class="col-md-6">
+                    <h4>¿Qué es?</h4>
+                    <p>La hipertensión arterial es una enfermedad crónica en la que aumenta la presión con la que el
+                        corazón bombea sangre a las arterias, para que circule por todo el cuerpo.</p>
+                    <h4>Síntomas</h4>
+                    <p>La mayoría de las personas que padecen de hipertensión arterial no lo saben, porque no tienen
+                        ningún síntoma, pero hay quien puede presentar: Dolor de cabeza intenso, mareo, zumbido de
+                        oídos, sensación de ver lucecitas, visión borrosa, dolor en el pecho y/o lumbar y tobillos
+                        hinchados.</p>
+                    <h4>Factores de riesgo</h4>
+                    <p>Los principales factores de riesgo para la hipertensión arterial incluyen la obesidad, la dieta
+                        alta en sodio, el consumo excesivo de alcohol, el sedentarismo, el estrés, el tabaquismo y los
+                        antecedentes familiares de hipertensión.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="insuficiencia" class="services">
-        <h2>Insuficiencia Cardíaca</h2>
-        <div class="services-container">
-            <div class="service-item">
-                <div class="image-container">
-                    <img src="/IMG/img/insuficiencia.png" alt="Insuficiencia Cardíaca">
+        <div class="container">
+            <h2>Insuficiencia Cardíaca</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/IMG/img/insuficiencia.png" class="img-fluid" alt="Insuficiencia Cardíaca">
                 </div>
-                <div class="service-info">
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <h4>¿Qué es?</h4>
-                            <p>La insuficiencia cardíaca (IC) es un enfermedad crónica y degenerativa del corazón que impide que éste tenga capacidad suficiente
-                                para bombear la sangre y por lo tanto de hacer llegar suficiente oxígeno y nutrientes al resto de los órganos.</p>
-                        </div>
-                        <div class="info-item">
-                            <h4>Síntomas</h4>
-                            <p>Los síntomas incluyen dificultad para respirar, fatiga, hinchazón en las piernas y tobillos, y latidos cardíacos irregulares.</p>
-                        </div>
-                        <div class="info-item">
-                            <h4>Factores de riesgo</h4>
-                            <p>Los factores de riesgo incluyen la hipertensión, la diabetes, el consumo excesivo de alcohol, el tabaquismo y la obesidad.</p>
-                        </div>
-                    </div>
+                <div class="col-md-6">
+                    <h4>¿Qué es?</h4>
+                    <p>La insuficiencia cardíaca es una condición crónica en la cual el corazón no bombea suficiente
+                        sangre para satisfacer las necesidades del cuerpo.</p>
+                    <h4>Síntomas</h4>
+                    <p>Los síntomas más comunes incluyen falta de aliento (disnea), fatiga y debilidad, hinchazón de
+                        piernas, tobillos y pies, ritmo cardíaco rápido o irregular (palpitaciones), falta de apetito y
+                        dificultad para concentrarse o pensar con claridad.</p>
+                    <h4>Factores de riesgo</h4>
+                    <p>Los factores de riesgo incluyen enfermedades coronarias, hipertensión arterial, diabetes,
+                        enfermedades de las válvulas cardíacas, enfermedades del músculo cardíaco, consumo excesivo de
+                        alcohol, tabaquismo, obesidad y antecedentes familiares de enfermedades cardíacas.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="arritmias" class="services">
-        <h2>Arritmias</h2>
-        <div class="services-container">
-            <div class="service-item">
-                <div class="image-container">
-                    <img src="/IMG/img/arritmias.png" alt="Arritmias">
+        <div class="container">
+            <h2>Arritmias</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/IMG/img/arritmias.png" class="img-fluid" alt="Arritmias">
                 </div>
-                <div class="service-info">
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <h4>¿Qué es?</h4>
-                            <p>Las arritmias son trastornos del ritmo cardíaco que pueden causar latidos del corazón irregulares, demasiado rápidos o demasiado lentos.</p>
-                        </div>
-                        <div class="info-item">
-                            <h4>Síntomas</h4>
-                            <p>Los síntomas incluyen palpitaciones, mareos, desmayos, dificultad para respirar y dolor en el pecho.</p>
-                        </div>
-                        <div class="info-item">
-                            <h4>Factores de riesgo</h4>
-                            <p>Los factores de riesgo incluyen enfermedades cardíacas, hipertensión, diabetes, tabaquismo, consumo excesivo de alcohol y estrés.</p>
-                        </div>
-                    </div>
+                <div class="col-md-6">
+                    <h4>¿Qué son?</h4>
+                    <p>Las arritmias son trastornos del ritmo cardíaco, es decir, cambios en la frecuencia cardíaca o en
+                        el patrón regular de los latidos del corazón.</p>
+                    <h4>Síntomas</h4>
+                    <p>Los síntomas pueden incluir palpitaciones, sensación de latidos irregulares, mareos, desmayos,
+                        falta de aire, dolor en el pecho y debilidad general.</p>
+                    <h4>Causas</h4>
+                    <p>Las arritmias pueden ser causadas por enfermedades del corazón, como enfermedad coronaria,
+                        insuficiencia cardíaca, hipertensión arterial, enfermedades de las válvulas cardíacas, entre
+                        otras.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="valvulopatias" class="services">
-        <h2>Valvulopatías</h2>
-        <div class="services-container">
-            <div class="service-item">
-                <div class="image-container">
-                    <img src="/IMG/img/valvulopatias.png" alt="Valvulopatías">
+        <div class="container">
+            <h2>Valvulopatías</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="/IMG/img/valvulopatias.png" class="img-fluid" alt="Valvulopatías">
                 </div>
-                <div class="service-info">
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <h4>¿Qué es?</h4>
-                            <p>Las valvulopatías son enfermedades de las válvulas del corazón que pueden afectar su funcionamiento y el flujo de sangre.</p>
-                        </div>
-                        <div class="info-item">
-                            <h4>Síntomas</h4>
-                            <p>Los síntomas incluyen fatiga, dificultad para respirar, hinchazón en los tobillos y pies, y palpitaciones.</p>
-                        </div>
-                        <div class="info-item">
-                            <h4>Factores de riesgo</h4>
-                            <p>Los factores de riesgo incluyen el envejecimiento, infecciones, enfermedades cardíacas congénitas y la fiebre reumática.</p>
-                        </div>
-                    </div>
+                <div class="col-md-6">
+                    <h4>¿Qué son?</h4>
+                    <p>Las valvulopatías son un grupo de enfermedades que afectan una o más de las válvulas cardíacas,
+                        alterando el flujo sanguíneo dentro del corazón.</p>
+                    <h4>Síntomas</h4>
+                    <p>Los síntomas pueden incluir falta de aliento, fatiga, hinchazón de tobillos y pies, mareos,
+                        palpitaciones, ritmo cardíaco irregular y dolor en el pecho.</p>
+                    <h4>Causas</h4>
+                    <p>Las valvulopatías pueden ser congénitas (presentes desde el nacimiento) o adquiridas (debidas a
+                        enfermedades como la fiebre reumática, endocarditis o degeneración valvular).</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="tratamiento" class="services">
-        <h2>¿Cómo prevenirlas?</h2>
-        <div class="services-container">
-            <div class="service-item">
-                <div class="image-container">
-                    <a href="https://www.paho.org/es/enlace/carga-enfermedades-cardiovasculares" target="_blank">
-                        <img src="/IMG/img/prevencion.png" alt="Prevencion">
-                    </a>
+    <section id="tratamiento" class="contact">
+        <div class="container">
+            <h2>Prevención y Tratamiento</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Prevención</h4>
+                    <p>La prevención de enfermedades cardiovasculares incluye adoptar un estilo de vida saludable, que
+                        incluya una dieta balanceada, actividad física regular, no fumar, mantener un peso saludable,
+                        controlar el estrés y seguir las recomendaciones médicas.</p>
                 </div>
-                <div class="service-info">
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <h4>1. Tratamientos.</h4>
-                            <p>La práctica de hábitos saludables como ejercicio físico, alimentación equilibrada, control de los niveles de colesterol, peso corporal y de enfermedades como diabetes e hipertensión, además de evitar el consumo de tabaco, favorecen la salud cardiovascular.</p>
-                        </div>
-                        <div class="info-item">
-                            <h4>2. Medicamentos.</h4>
-                            <p>Si los cambios en el estilo de vida no dan resultado por sí solos, puede ser necesario tomar medicamentos para controlar los síntomas de la enfermedad cardíaca y prevenir las complicaciones. El tipo de medicamento usado dependerá del tipo de enfermedad cardíaca.</p>
-                        </div>
-                        <div class="info-item">
-                            <h4>3. Cirugias u otros procedimientos.</h4>
-                            <p>Algunas personas con enfermedades cardíacas pueden necesitar un procedimiento o una cirugía. El tipo de procedimiento o cirugía dependerá del tipo de enfermedad cardíaca y de la cantidad de daño al corazón.</p>
-                        </div>
-                    </div>
+                <div class="col-md-6">
+                    <h4>Tratamiento</h4>
+                    <p>El tratamiento depende del tipo y gravedad de la enfermedad cardiovascular. Puede incluir cambios
+                        en el estilo de vida, medicamentos, procedimientos médicos o quirúrgicos como angioplastia,
+                        colocación de stents o cirugía de bypass.</p>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <footer>
-        <p>&copy; 2024 TuSalud. Todos los derechos reservados.</p>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - TuSalud - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacidad</a>
+        </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>
