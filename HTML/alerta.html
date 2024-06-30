@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador y alerta</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link href="./../CSS/Login.css" rel="stylesheet">
+    <link href="./../CSS/flex.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/alerta.css">
+
+    <!-- JavaScript -->
+    <script src="./../JS/jquery.min.js"></script>
+    <script src="./../JS/materialize.min.js"></script>
+    <script>
+        // JavaScript functions go here
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="../index.html">
+                <img src="/IMG/Logo.svg" alt="Logo" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="infoECV.html">Info Enfermedades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rutinas.html">Rutinas recomendadas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="alerta.html">Contador</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="RegistroUsuario.html">Registrar Usuario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login_Usuario.html">Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Contador de Tiempo</h1>
+            <p>Tiempo transcurrido:<br><span id="contador">00:00</span></p>
+            <div class="row">
+                <div class="input-field col s12 m4">
+                    <input type="number" id="horas" min="0" max="23" class="validate">
+                    <label for="horas">Horas</label>
+                </div>
+                <div class="input-field col s12 m4">
+                    <input type="number" id="minutos" min="0" max="59" class="validate">
+                    <label for="minutos">Minutos</label>
+                </div>
+                <div class="input-field col s12 m4">
+                    <input type="number" id="segundos" min="0" max="59" class="validate">
+                    <label for="segundos">Segundos</label>
+                </div>
+            </div>
+            <button class="btn" onclick="empezarConteo()">Empezar Conteo</button>
+            <button class="btn red" onclick="detenerConteo()">Detener Conteo</button>
+        </div>
+    </main>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - TuSalud - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="../JS/alerta.js"></script>
+</body>
+
+</html>

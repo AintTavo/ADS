@@ -1,0 +1,26 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    /* Tamaño grande para el título */
+}
+
+#contador {
+    font-size: 2.5rem;
+    /* Tamaño grande para el contador */
+    display: block;
+    margin-top: 20px;
+}
