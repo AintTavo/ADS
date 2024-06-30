@@ -67,7 +67,7 @@ $result_agenda = $stmt_agenda->get_result();
     <header>
         <div class="row">
             <div class="col s12">
-                <img src="./../IMG/Logo_IPN.png" class="logos_instituciones responsive-img">
+                <img src="./../IMG/Logo_IPN.png" class="logos_instituciones responsive-img" width="50">
             </div>
         </div>
         <nav>
