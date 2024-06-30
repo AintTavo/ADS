@@ -19,7 +19,7 @@
         {
             $_SESSION["USUARIO"]=$usuario;
             echo "Bienvenido";
-            header("location:./Crud_Docentes.php");
+            header("location:Crud_Docentes.php");
         }
         else
         {

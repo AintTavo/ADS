@@ -1,74 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preregistro</title>
-    <!--CSS-->
-    <link rel="stylesheet" href="./CSS/materialize.min.css">
-    <link href="./CSS/Login.css" rel="stylesheet">
-    <link href="./CSS/flex.css" rel="stylesheet">
-    <link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--JavaScript-->
-    <script src="./JS/jquery.min.js"></script>
-    <script src="./JS/materialize.min.js"></script>
-    <script src="./JS/just_validate.min.js"></script>
-    <script src="./JS/sweet_alert.min.js"></script>
-    <script src="./JS/Login.js"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - HealthTrackingApp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/CSS/site.css" />
 </head>
 <body>
     <header>
-        <div class="row">
-            <div class="col s12">
-                <img src="./IMG/Logo_IPN.png" class="logos_instituciones responsive-img" >
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/IMG/Logo.svg" alt="Logo" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Acerca">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Ayuda">Ayuda</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/RegistroUsuario.html">Registrar Usuario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/Login_Usuario.html">Iniciar Sesión</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-        
+        </nav>
     </header>
-    <main class="valign-wrapper">
-        <div class="container">
-            <!--Titulo dela paginas-->
-            <div class="row">
-                <div class="col s12 ">
-                        <img class="responsive-img" src="./IMG/Medalla.png" id="img_medalla">
-                        <h3>PRE-REGISTRO PARA LA CEREMONIA DE DISTINCION AL MERITO POLITECNICO 2023</h3>
-                </div>
-            </div>
-            <!--Introduccion de datos-->
-           
-                <form id="formLogin" action="./PHP/Controlador_Login.php"  method="post" autocomplete="off"  >
-                    <div class="row">
-                        <!--Curp-->
-                        <div class="input-field col s12 m6">
-                        <i class="material-icons prefix">account_circle</i>
-                        <label for="curp">Ingrese su C.U.R.P</label>
-                        <input id="curp" type="text" class="validate" autocomplete="off" name="curp">
-                        
-                        </div>
-                        <!--Boton de envio-->
-                        <div class="col s12 m6 input-field">
-                            <button class="btn blue" type="submit" name="boton" id="boton1" style="width: 100%;">ENTRAR</button>
-                        </div>
-                        
-                    </div> 
-                              
-                </form>
-            <!--Boton para irse al login del administrador-->
-            <div class="row">
-                <div class="col s12">
-                    <a href="./HTML/Login_Usuario.html" class="btn btn-small "><i class="material-icons small left">perm_contact_calendar</i>Administrador</a>
-                </div>
-            </div>
+    
+    <div class="container mt-5">
+        <div class="text-center">
+            <img src="IMG/Logo.svg" alt="Logo" class="img-fluid" style="height: 200px;" />
+            <h1 class="display-4">Bienvenido a TuSalud, ¿Estás listo para el cambio?</h1>
         </div>
-
-    </main>
-    <footer class="page-footer blue">
-            <div class="footer-copyright">
-              <div class="container ">
-                 © 2024 Copyright 
-              </div>
-            </div>
+        <div class="mt-5">
+            <h2>Información sobre Salud</h2>
+            <p>En TuSalud, nos comprometemos a proporcionarte la mejor información y recursos sobre cómo mantener un estilo de vida saludable. Aquí encontrarás una agenda, consejos y guías sobre la prevención de enfermedades cardiovasculares, la importancia de la actividad física, y mucho más.</p>
+            <p>Recuerda siempre consultar a tu médico antes de iniciar cualquier nuevo régimen de ejercicios o cambios significativos en tu dieta.</p>
+        </div>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - TuSalud - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
     </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
 </body>
 </html>
