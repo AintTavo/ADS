@@ -1,5 +1,7 @@
 <?php
 include "./Conexion_Base_Datos.php";
+$archivo = file_get_contents('./../CSS/materialize.min.css');
+
 
 if (!isset($_GET["id_agenda"])) {
     header("location:./Crud_Docentes.php");
@@ -30,14 +32,25 @@ $datos = $resultado->fetch_object();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eliminar recordatorio</title>
-    <!-- CSS -->
+    <title>Eliminar</title>
+    <!--CSS-->
     <link rel="stylesheet" href="./../CSS/materialize.min.css">
-    <link rel="stylesheet" href="./../CSS/Crud_Docentes.css">
-    <link rel="stylesheet" href="./../CSS/flex.css">
-    <link rel="stylesheet" href="./../CSS/datatable.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="./../CSS/Crud_Docentes.css" rel="stylesheet">
+    <link href="./../CSS/flex.css" rel="stylesheet">
+    <link href="./../CSS/datatable.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--JavaScript-->
+    <script src="./../JS/jquery.min.js"></script>
+    <script src="./../JS/materialize.min.js"></script>
+    <script src="./../JS/just_validate.min.js"></script>
+    <script src="./../JS/sweet_alert.min.js"></script>
+    <script src="./../JS/datatable.min.js"></script>
+    <script src="./../JS/Crud_Docentes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        <?=$archivo?>
+    </style>
 </head>
 <body>
     <header>
