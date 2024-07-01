@@ -26,28 +26,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Obtener el correo electrónico del usuario
         $user_email = $row['email'];
 
-        // Enviar el enlace de recuperación por correo electrónico usando PHPMailer
-        $reset_link = "http://yourdomain.com/reset_password.html?token=" . $token;
+        // Enviar el enlace de recuperación por correo electrónico usando Mailtrap
+        $reset_link = "ads.localhost/PHP/reset_contrasena.php?token=".$token;
         
         $mail = new PHPMailer(true);
 
         try {
-            // Configuración del servidor SMTP de Google
-            $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com';
-            $mail->SMTPAuth = true;
-            $mail->Username = 'c61909720@gmail.com';
-            $mail->Password = '%R4mkXb6NZ'; // Aquí debes usar la contraseña correcta o la contraseña de aplicación generada
-            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-            $mail->Port = 587;
+            // Configuración del servidor SMTP de Mailtrap
+            $phpmailer = new PHPMailer();
+            $phpmailer->isSMTP();
+            $phpmailer->Host = 'sandbox.smtp.mailtrap.io';
+            $phpmailer->SMTPAuth = true;
+            $phpmailer->Port = 2525;
+            $phpmailer->Username = '3bcbdb2890f1ad';
+            $phpmailer->Password = 'f985f013cfebff';
 
             // Configuración del correo electrónico
-            $mail->setFrom('c61909720@gmail.com', 'TuSalud');
-            $mail->addAddress($user_email);
-            $mail->Subject = 'Recuperación de contraseña';
-            $mail->Body = "Haz clic en el siguiente enlace para restablecer tu contraseña: " . $reset_link;
+            $phpmailer->setFrom('gustavo.25.zgo@gmail.com','CodigoDeValidacion');
+            $phpmailer->addAddress($user_email);
+            $phpmailer->Subject = 'Recuperación de contraseña';
+            $phpmailer->Body = "Haz clic en el siguiente enlace para restablecer tu contraseña: " . $reset_link;
 
-            $mail->send();
+            $phpmailer->send();
             echo "Se ha enviado un enlace de recuperación a tu correo electrónico.";
         } catch (Exception $e) {
             echo "Hubo un error al enviar el correo electrónico: {$mail->ErrorInfo}";

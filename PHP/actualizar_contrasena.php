@@ -1,6 +1,6 @@
 <?php
 // Conexión a la base de datos
-require 'config.php'; // Asegúrate de que este archivo contiene la conexión a la base de datos
+require 'Conexion_Base_Datos.php'; // Asegúrate de que este archivo contiene la conexión a la base de datos
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $token = $_POST['token'];
@@ -19,6 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute();
 
         echo "Tu contraseña ha sido actualizada.";
+        header("location:./../HTML/Login_Usuario.html");
+        exit();
     } else {
         echo "El enlace de recuperación es inválido o ha expirado.";
     }
