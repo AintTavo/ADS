@@ -95,12 +95,6 @@ $result_agenda = $stmt_agenda->get_result();
                             <a href="./Crud_Docentes.php">AGENDA</a>
                         </div>
                     </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <i class="material-icons">assignment</i>
-                            <a href="./Crud_PAAE.php">PAAE</a>
-                        </div>
-                    </li>
                 </ul>
             </div> 
             <!-- CRUD -->
@@ -108,7 +102,7 @@ $result_agenda = $stmt_agenda->get_result();
                 <!-- Parte para ingresar datos -->
                 <div class="col s12 m4">
                     <h4 class="center-align">Registrar</h4>
-                    <form method="post" id="formulario_docentes" autocomplete="off" action="./Registro_Docentes.php">
+                    <form method="post" id="formulario_docentes" autocomplete="off" action="./Crud_Docentes.php">
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">perm_identity</i>
@@ -181,22 +175,19 @@ $result_agenda = $stmt_agenda->get_result();
                         </thead>
                         <tbody>
                             <?php
-                            // Realizamos la consulta sql
-                            $sql=$conexion->query('SELECT * FROM agenda');
-                            // Recorremos todos los datos de la consulta
                             while ($datos = $result_agenda->fetch_object()) {
                                 ?>
                                 <tr>
-                                    <td><?=$datos->Id?></td>
-                                    <td><?=$datos->Recordatorio?></td>
-                                    <td><?=$datos->Tipo?></td>
-                                    <td><?=$datos->Importancia?></td>
-                                    <td><?=$datos->Inicio_periodo?></td>
-                                    <td><?=$datos->Fin_periodo?></td>
-                                    <td><?=$datos->Hora?></td>
+                                    <td><?=$datos->id_agenda?></td>
+                                    <td><?=$datos->recordatorio?></td>
+                                    <td><?=$datos->tipo?></td>
+                                    <td><?=$datos->importancia?></td>
+                                    <td><?=$datos->inicio_periodo?></td>
+                                    <td><?=$datos->fin_periodo?></td>
+                                    <td><?=$datos->hora?></td>
                                     <td>
-                                        <a href="./Editar_Docentes.php?Id=<?=$datos->Id?>" class="btn btn-small orange"><i class="material-icons small">edit</i></a>
-                                        <a href="./Eliminar_Docente.php?Id=<?=$datos->Id?>" class="btn btn-small red" id="boton_eliminar"><i class="material-icons small">delete_forever</i></a>
+                                        <a href="./Editar_Docentes.php?id_agenda=<?=$datos->id_agenda?>&id_usuario=<?=$datos->id_usuario?>" class="btn btn-small orange"><i class="material-icons small">edit</i></a>
+                                        <a href="./Eliminar_Docente.php?id_agenda=<?=$datos->id_agenda?>&id_usuario=<?=$datos->id_usuario?>" class="btn btn-small red" id="boton_eliminar"><i class="material-icons small">delete_forever</i></a>
                                     </td>
                                 </tr>
                             <?php }
@@ -205,8 +196,8 @@ $result_agenda = $stmt_agenda->get_result();
                     </table>
                 </div>
             </div>
-              <!-- Botón para editar información del perfil -->
-              <div class="row">
+            <!-- Botón para editar información del perfil -->
+            <div class="row">
                 <div class="col s12 center-align">
                     <a href="./editarUsuario.php" class="btn green"><i class="material-icons left">edit</i>Editar información del perfil</a>
                 </div>
@@ -237,4 +228,3 @@ $result_agenda = $stmt_agenda->get_result();
     </script>
 </body>
 </html>
-         

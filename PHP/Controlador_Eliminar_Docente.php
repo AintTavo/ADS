@@ -3,8 +3,8 @@
 //Incluimos la conexion a la base de datos
 include "./Conexion_Base_Datos.php";
 //Recuperamos el curp enviado
-$id=$_GET["Id"];
+$id=$_GET["id_agenda"];
 //Realizmaos la accion de elimanar el registro en la base de datos
-$sql=$conexion->query("DELETE FROM agenda WHERE Id='$id'");
+$sql=$conexion->query("DELETE FROM agenda WHERE id_agenda='$id'");
 header("Location:./Crud_Docentes.php");
 ?>
