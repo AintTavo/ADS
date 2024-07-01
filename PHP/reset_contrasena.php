@@ -29,13 +29,30 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/">Inicio</a>
+                        <a class="nav-link" href="/HTML/inicio.html">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="infoECV.html">Info Enfermedades</a>
+                        <a class="nav-link" href="/HTML/infoECV.html">Info Enfermedades</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="rutinas.html">Rutinas recomendadas</a>
+                        <a class="nav-link" href="/HTML/rutinas.html">Rutinas recomendadas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/alerta.html">Contador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/hospitales.html">Hospitales cercanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/AcercaDe.html">Acerca De</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/RegistroUsuario.html">Registrar Usuario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/Login_Usuario.html">Iniciar Sesión</a>
                     </li>
                 </ul>
             </div>

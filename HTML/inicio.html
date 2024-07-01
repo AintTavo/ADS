@@ -19,17 +19,17 @@
     <script src="./../JS/inicio.js"></script>
 </head>
 <body class="inicio-body">
-    <header class="bootstrap-style">
+    <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-           
+            <a class="navbar-brand" href="/index.html">
+                <img src="/IMG/Logo.svg" alt="Logo" style="height: 40px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
-                    <a class="navbar-brand" href="/HTML/inicio.html">
-                        <img src="/IMG/Logo.svg" alt="Logo" style="height: 40px;">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
                     <li class="nav-item active">
                         <a class="nav-link" href="/HTML/inicio.html">Inicio</a>
                     </li>
@@ -39,8 +39,24 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/HTML/rutinas.html">Rutinas recomendadas</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/alerta.html">Contador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/hospitales.html">Hospitales cercanos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/AcercaDe.html">Acerca De</a>
+                    </li>
                 </ul>
-                
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/RegistroUsuario.html">Registrar Usuario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/HTML/Login_Usuario.html">Iniciar Sesión</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -49,16 +65,6 @@
             <h3 class="center-align inicio-title">Categorías</h3>
             <div class="row">
                 
-                <div class="col s12 m4">
-                    <div class="card hoverable inicio-card">
-                        <div class="card-image inicio-card-image">
-                            <a href="/Agenda.html">
-                                <img src="./../IMG/inicio/agenda.jpg" alt="Agenda">
-                                <span class="card-title inicio-card-title"><h6>Agenda</h6></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
                 <div class="col s12 m4">
                     <div class="card hoverable inicio-card">
                         <div class="card-image inicio-card-image">
@@ -95,16 +101,6 @@
                             <a href="/HTML/alerta.html">
                                 <img src="/IMG/inicio/contador.jpg" alt="Personal">
                                 <span class="card-title inicio-card-title"><h6>Contador</h6></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m4">
-                    <div class="card hoverable inicio-card">
-                        <div class="card-image inicio-card-image">
-                            <a href="/HTML/inicio.html">
-                                <img src="./../IMG/inicio/infopersonal.avif" alt="Ajustes">
-                                <span class="card-title inicio-card-title"><h6>Información Personal</h6></span>
                             </a>
                         </div>
                     </div>
